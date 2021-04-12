@@ -1,0 +1,26 @@
+{
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "Generates an HTML page showing a Manager, Engineer(s), and Intern(s)",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kvaden19/team-profile-generator.git"
+  },
+  "author": "Kelly Vaden",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kvaden19/team-profile-generator/issues"
+  },
+  "homepage": "https://github.com/kvaden19/team-profile-generator#readme",
+  "dependencies": {
+    "inquirer": "^8.0.0",
+    "jest": "^26.6.3"
+  }
+}
