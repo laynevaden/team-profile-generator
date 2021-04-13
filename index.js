@@ -1,3 +1,4 @@
 const Employee = require('./lib/Employee');
 
-const George = new Employee('Kelly', 78);
+const Kelly = new Employee("Kelly", 78, "klvaden@gmail.com");
+console.log(typeof(Kelly.id))

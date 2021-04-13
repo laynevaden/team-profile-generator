@@ -31,6 +31,16 @@ describe('Employee Class', () => {
             expect(cb).toThrowError('parameter');
         });
 
+        test('should throw an error if email does not include @', () => {
+            const cb = () => new Employee('George', 123, 'georgefakemail.com');
+            expect(cb).toThrowError('parameter');
+        });
+
+        test('should throw an error if email does not include .', () => {
+            const cb = () => new Employee('George', 123, 'george@fakemail');
+            expect(cb).toThrowError('parameter');
+        });
+
         test('should throw an error if email is not a string', () => {
             const cb = () => new Employee('George', 123, 1987);
             expect(cb).toThrowError('parameter');
