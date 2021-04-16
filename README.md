@@ -1,15 +1,15 @@
 # Team Profile Generator
 
 ## TODOs:
-- Write tests / create Employee object
+- Write more Inquirer prompts, in a loop, to capture more Employees
+- Write the HTML / Bootstrap template
 - Write tests / create objects that extend Employee
     - Manager
     - Engineer
     - Intern
-- Write the Inquirer prompts
-    - User validation
-- Write the HTML template
-- Add styling
+- Adapt Inquirer + template to subclasses
 - Deliverables
+    - repo
+    - README
     - sample HTML file
     - walkthru video
