@@ -38,22 +38,38 @@ const getManager = () => {
         {
             type: 'input',
             name: 'mgrName',
-            message: "Welcome to the Team Profile Generator! Please enter the manager's name: "
+            message: "Welcome to the Team Profile Generator! Please enter the manager's name: ",
+            validate: function(value) {
+                let pass = (value.length > 1);
+                return pass || 'Please enter a name';
+            }
         },
         {
             type: 'input',
             name: 'mgrID',
-            message: "Manager's employee ID: "
+            message: "Manager's employee ID: ",
+            validate: function (value) {
+                let pass = !isNaN(parseInt(value));
+                return pass || 'Please enter a number';
+            }
         },
         {
             type: 'input',
             name: 'mgrEmail',
-            message: "Manager's email: "
+            message: "Manager's email: ",
+            validate: function (value) {
+                let pass = value.match(/^[\w-]+@[\w-]+\.[\w-]+$/);
+                return pass || 'Please enter a valid email';
+            }
         },
         {
             type: 'input',
             name: 'mgrPhone',
-            message: "Manager's office phone: "
+            message: "Manager's office phone: ",
+            validate: function (value) {
+                let pass = value.match(/^\+?([0-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/);
+                return pass || 'Please enter a valid phone number';
+            }
         }
     ])
     .then(answers => {
@@ -72,22 +88,39 @@ const getEngineer = () => {
         {
             type: 'input',
             name: 'egrName',
-            message: "Please enter the engineer's name: "
+            message: "Please enter the engineer's name: ",
+            validate: function(value) {
+                let pass = (value.length > 1);
+                return pass || 'Please enter a name';
+            }
         },
         {
             type: 'input',
             name: 'egrID',
-            message: "Engineer's employee ID: "
+            message: "Engineer's employee ID: ",
+            validate: function (value) {
+                let pass = !isNaN(parseInt(value));
+                return pass || 'Please enter a number';
+            }
         },
         {
             type: 'input',
             name: 'egrEmail',
-            message: "Engineer's email: "
+            message: "Engineer's email: ",
+            validate: function (value) {
+                let pass = value.match(/^[\w-]+@[\w-]+\.[\w-]+$/);
+                return pass || 'Please enter a valid email';
+            }
         },
         {
             type: 'input',
             name: 'egrGitHub',
-            message: "Engineer's GitHub username: "
+            message: "Engineer's GitHub username: ",
+            validate: function(value) {
+                let pass = (value.length > 1);
+                return pass || 'Please enter a username';
+            }
+            }
         }
     ])
     .then(answers => {
@@ -106,22 +139,38 @@ const getIntern = () => {
         {
             type: 'input',
             name: 'intName',
-            message: "Please enter the intern's name: "
+            message: "Please enter the intern's name: ",
+            validate: function(value) {
+                let pass = (value.length > 1);
+                return pass || 'Please enter a name';
+            }
         },
         {
             type: 'input',
             name: 'intID',
-            message: "Intern's employee ID: "
+            message: "Intern's employee ID: ",
+            validate: function (value) {
+                let pass = !isNaN(parseInt(value));
+                return pass || 'Please enter a number';
+            }
         },
         {
             type: 'input',
             name: 'intEmail',
-            message: "Intern's email: "
+            message: "Intern's email: ",
+            validate: function (value) {
+                let pass = value.match(/^[\w-]+@[\w-]+\.[\w-]+$/);
+                return pass || 'Please enter a valid email';
+            }
         },
         {
             type: 'input',
             name: 'intSchool',
-            message: "Intern's school: "
+            message: "Intern's school: ",
+            validate: function(value) {
+                let pass = (value.length > 1);
+                return pass || 'Please enter a school';
+            }
         }
     ])
     .then(answers => {
