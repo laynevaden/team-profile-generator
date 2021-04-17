@@ -120,7 +120,6 @@ const getEngineer = () => {
                 let pass = (value.length > 1);
                 return pass || 'Please enter a username';
             }
-            }
         }
     ])
     .then(answers => {
