@@ -5,11 +5,11 @@ const Intern = require('../lib/Intern');
 describe('Intern Class', () => {
     describe('initialization', () => {
         test('should create an object with a name, id, email, and school if provided valid arguments', () => {
-            const Intern = new Intern('George', 123, 'george@fakemail.com', 'Hogwarts');
-            expect(Intern.name).toEqual('George');
-            expect(Intern.id).toEqual(123);
-            expect(Intern.email).toEqual('george@fakemail.com');
-            expect(Intern.school).toEqual('Hogwarts');
+            const intern = new Intern('George', 123, 'george@fakemail.com', 'Hogwarts');
+            expect(intern.name).toEqual('George');
+            expect(intern.id).toEqual(123);
+            expect(intern.email).toEqual('george@fakemail.com');
+            expect(intern.school).toEqual('Hogwarts');
         });
 
         test('should throw an error if provided no arguments', () => {
@@ -65,36 +65,36 @@ describe('Intern Class', () => {
 
     describe('getName', () => {
         test('should return the object name property as a string', () => {
-            const Intern = new Intern('George', 123, 'george@fakemail.com', 'Hogwarts');
-            expect(Intern.getName()).toEqual('George');
+            const intern = new Intern('George', 123, 'george@fakemail.com', 'Hogwarts');
+            expect(intern.getName()).toEqual('George');
         });
     });
 
     describe('getId', () => {
         test('should return the object id property as a string', () => {
-            const Intern = new Intern('George', 123, 'george@fakemail.com', 'Hogwarts');
-            expect(Intern.getId()).toEqual(123);
+            const intern = new Intern('George', 123, 'george@fakemail.com', 'Hogwarts');
+            expect(intern.getId()).toEqual(123);
         });
     });
 
     describe('getEmail', () => {
         test('should return the object email property as a string', () => {
-            const Intern = new Intern('George', 123, 'george@fakemail.com', 'Hogwarts');
-            expect(Intern.getEmail()).toEqual('george@fakemail.com');
+            const intern = new Intern('George', 123, 'george@fakemail.com', 'Hogwarts');
+            expect(intern.getEmail()).toEqual('george@fakemail.com');
         });
     });
 
     describe('getSchool', () => {
         test('should return the object school property as a string', () => {
-            const Intern = new Intern('George', 123, 'george@fakemail.com', 'Hogwarts');
-            expect(Intern.getGitHub()).toEqual('Hogwarts');
+            const intern = new Intern('George', 123, 'george@fakemail.com', 'Hogwarts');
+            expect(intern.getSchool()).toEqual('Hogwarts');
         });
     });
 
     describe('getRole', () => {
         test('should return Intern as a string', () => {
-            const Intern = new Intern('George', 123, 'george@fakemail.com', 'Hogwarts');
-            expect(Intern.getRole()).toEqual('Intern');
+            const intern = new Intern('George', 123, 'george@fakemail.com', 'Hogwarts');
+            expect(intern.getRole()).toEqual('Intern');
         });
     });
 

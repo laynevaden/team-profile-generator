@@ -5,11 +5,11 @@ const Engineer = require('../lib/Engineer');
 describe('Engineer Class', () => {
     describe('initialization', () => {
         test('should create an object with a name, id, email, and github username if provided valid arguments', () => {
-            const Engineer = new Engineer('George', 123, 'george@fakemail.com', 'george617');
-            expect(Engineer.name).toEqual('George');
-            expect(Engineer.id).toEqual(123);
-            expect(Engineer.email).toEqual('george@fakemail.com');
-            expect(Engineer.github).toEqual('george617');
+            const engineer = new Engineer('George', 123, 'george@fakemail.com', 'george617');
+            expect(engineer.name).toEqual('George');
+            expect(engineer.id).toEqual(123);
+            expect(engineer.email).toEqual('george@fakemail.com');
+            expect(engineer.username).toEqual('george617');
         });
 
         test('should throw an error if provided no arguments', () => {
@@ -65,36 +65,36 @@ describe('Engineer Class', () => {
 
     describe('getName', () => {
         test('should return the object name property as a string', () => {
-            const Engineer = new Engineer('George', 123, 'george@fakemail.com', 'george617');
-            expect(Engineer.getName()).toEqual('George');
+            const engineer = new Engineer('George', 123, 'george@fakemail.com', 'george617');
+            expect(engineer.getName()).toEqual('George');
         });
     });
 
     describe('getId', () => {
         test('should return the object id property as a string', () => {
-            const Engineer = new Engineer('George', 123, 'george@fakemail.com', 'george617');
-            expect(Engineer.getId()).toEqual(123);
+            const engineer = new Engineer('George', 123, 'george@fakemail.com', 'george617');
+            expect(engineer.getId()).toEqual(123);
         });
     });
 
     describe('getEmail', () => {
         test('should return the object email property as a string', () => {
-            const Engineer = new Engineer('George', 123, 'george@fakemail.com', 'george617');
-            expect(Engineer.getEmail()).toEqual('george@fakemail.com');
+            const engineer = new Engineer('George', 123, 'george@fakemail.com', 'george617');
+            expect(engineer.getEmail()).toEqual('george@fakemail.com');
         });
     });
 
-    describe('getGitHub', () => {
+    describe('getGithub', () => {
         test('should return the object GitHub username property as a string', () => {
-            const Engineer = new Engineer('George', 123, 'george@fakemail.com', 'george617');
-            expect(Engineer.getGitHub()).toEqual('george617');
+            const engineer = new Engineer('George', 123, 'george@fakemail.com', 'george617');
+            expect(engineer.getGithub()).toEqual('george617');
         });
     });
 
     describe('getRole', () => {
         test('should return Engineer as a string', () => {
-            const Engineer = new Engineer('George', 123, 'george@fakemail.com', 'george617');
-            expect(Engineer.getRole()).toEqual('Engineer');
+            const engineer = new Engineer('George', 123, 'george@fakemail.com', 'george617');
+            expect(engineer.getRole()).toEqual('Engineer');
         });
     });
 
