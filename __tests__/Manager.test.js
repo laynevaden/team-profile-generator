@@ -5,11 +5,11 @@ const Manager = require('../lib/Manager');
 describe('Manager Class', () => {
     describe('initialization', () => {
         test('should create an object with a name, id, email, and phone number if provided valid arguments', () => {
-            const Manager = new Manager('George', 123, 'george@fakemail.com', '617-123-4567');
-            expect(Manager.name).toEqual('George');
-            expect(Manager.id).toEqual(123);
-            expect(Manager.email).toEqual('george@fakemail.com');
-            expect(Manager.phone).toEqual('617-123-4567');
+            const manager = new Manager('George', 123, 'george@fakemail.com', '617-123-4567');
+            expect(manager.name).toEqual('George');
+            expect(manager.id).toEqual(123);
+            expect(manager.email).toEqual('george@fakemail.com');
+            expect(manager.phone).toEqual('617-123-4567');
         });
 
         test('should throw an error if provided no arguments', () => {
@@ -65,36 +65,36 @@ describe('Manager Class', () => {
 
     describe('getName', () => {
         test('should return the object name property as a string', () => {
-            const Manager = new Manager('George', 123, 'george@fakemail.com', '617-123-4567');
-            expect(Manager.getName()).toEqual('George');
+            const manager = new Manager('George', 123, 'george@fakemail.com', '617-123-4567');
+            expect(manager.getName()).toEqual('George');
         });
     });
 
     describe('getId', () => {
         test('should return the object id property as a string', () => {
-            const Manager = new Manager('George', 123, 'george@fakemail.com', '617-123-4567');
-            expect(Manager.getId()).toEqual(123);
+            const manager = new Manager('George', 123, 'george@fakemail.com', '617-123-4567');
+            expect(manager.getId()).toEqual(123);
         });
     });
 
     describe('getEmail', () => {
         test('should return the object email property as a string', () => {
-            const Manager = new Manager('George', 123, 'george@fakemail.com', '617-123-4567');
-            expect(Manager.getEmail()).toEqual('george@fakemail.com');
+            const manager = new Manager('George', 123, 'george@fakemail.com', '617-123-4567');
+            expect(manager.getEmail()).toEqual('george@fakemail.com');
         });
     });
 
     describe('getPhone', () => {
         test('should return the object phone number property as a string', () => {
-            const Manager = new Manager('George', 123, 'george@fakemail.com', '617-123-4567');
-            expect(Manager.getPhone()).toEqual('617-123-4567');
+            const manager = new Manager('George', 123, 'george@fakemail.com', '617-123-4567');
+            expect(manager.getPhone()).toEqual('617-123-4567');
         });
     });
 
     describe('getRole', () => {
         test('should return Manager as a string', () => {
-            const Manager = new Manager('George', 123, 'george@fakemail.com', '617-123-4567');
-            expect(Manager.getRole()).toEqual('Manager');
+            const manager = new Manager('George', 123, 'george@fakemail.com', '617-123-4567');
+            expect(manager.getRole()).toEqual('Manager');
         });
     });
 

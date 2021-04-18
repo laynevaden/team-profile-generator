@@ -1,7 +1,7 @@
 # Team Profile Generator
 
 ## TODOs:
-- Write tests / create objects that extend Employee
+- Create objects that extend Employee
     - Manager
     - Engineer
     - Intern
